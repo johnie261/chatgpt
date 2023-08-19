@@ -1,2 +1,16 @@
-// 0x18939aebE5B623bE6fC622efafB0BebE4B0607Ee
-// GPTMembership address: 0x18939aebE5B623bE6fC622efafB0BebE4B0607Ee
+import React, { createContext, useContext } from 'react'
+
+const StateContext = createContext();
+
+export const StateContextProvider = ({children}) => {
+
+  return (
+    <StateContext.Provider
+      value = {{}}
+    >
+      {children}
+    </StateContext.Provider>
+  )
+}
+
+export const useStateContext = () => useContext(StateContext);
