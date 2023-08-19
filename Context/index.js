@@ -69,6 +69,10 @@ export const StateContextProvider = ({children}) => {
       }
 
       console.log(userMembership)
+      setUserMembership(userMembership)
+
+       const proMember = JSON.stringify(userMembership)
+       localStorage.setItem("Userdetails", proMember) 
 
     } catch (error) {
       console.log(error)
@@ -99,10 +103,87 @@ export const StateContextProvider = ({children}) => {
     console.log(list)
    }
 
+   const buyMembership = async(memberShip_id) => {
+    const contract = await connectingWithContract();
+    const connectAccount = await connectWallet();
+    setAddress(connectAccount)
+
+    try {
+      if(memberShip_id == 1) {
+        const today = Date.now() + 2678400000;
+        let date = new Date(today);
+        const expireDate = data.toLocalDateString("en-US");
+        const money = ethers.utils.parseEther("1")
+
+        const mintTransaction = await contract.mint(
+          memberShip_id,
+          connectAccount,
+          expireDate.toString(),
+          {
+            value: money.toString(),
+          },
+        );
+
+        await mintTransaction.wait();
+        const freeTrail = JSON.stringify("Pro Member")
+        localStorage.setItem("freeTrail", freeTrail);
+        console.log("Taken membership", mintTransaction)
+        window.location.reload()
+      } else if (memberShip_id == 2) {
+        const today = Date.now() + 2678400000 * 6;
+        let date = new Date(today);
+        const expireDate = data.toLocalDateString("en-US");
+        const money = ethers.utils.parseEther("3")
+
+        const mintTransaction = await contract.mint(
+          memberShip_id,
+          connectAccount,
+          expireDate.toString(),
+          {
+            value: money.toString(),
+          },
+        );
+
+        await mintTransaction.wait();
+        const freeTrail = JSON.stringify("Pro Member")
+        localStorage.setItem("freeTrail", freeTrail);
+        console.log("Taken membership", mintTransaction)
+        window.location.reload()
+      } else {
+        const today = Date.now() + 2678400000 * 12;
+        let date = new Date(today);
+        const expireDate = data.toLocalDateString("en-US");
+        const money = ethers.utils.parseEther("5")
+
+        const mintTransaction = await contract.mint(
+          memberShip_id,
+          connectAccount,
+          expireDate.toString(),
+          {
+            value: money.toString(),
+          },
+        );
+
+        await mintTransaction.wait();
+        const freeTrail = JSON.stringify("Pro Member")
+        localStorage.setItem("freeTrail", freeTrail);
+        console.log("Taken membership", mintTransaction)
+        window.location.reload()
+      }
+    } catch (error) {
+      console.log(error)
+    }
+   }
+
   return (
     <StateContext.Provider
       value = {{
-        listMembership
+        listMembership,
+        buyMembership,
+        free,
+        address,
+        contractMembership,
+        userMembership
       }}
     >
       {children}
