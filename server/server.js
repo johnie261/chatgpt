@@ -3,7 +3,7 @@ import cors from "cors";
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  apiKey: "YOUR_API_KEY"
+  apiKey: "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"
 });
 
 const openai = new OpenAIApi(configuration);
@@ -11,6 +11,12 @@ const openai = new OpenAIApi(configuration);
 const app =  express()
 app.use(cors());
 app.use(express.json())
+
+app.get('/test', async(req, res) => {
+  res.status(200).send({
+    message: "700 johnies"
+  })
+})
 
 app.post('/', async(req, res) => {
   try {
@@ -38,5 +44,5 @@ app.post('/', async(req, res) => {
 })
 
 app.listen(4000, () => 
-  console.log("AI server started on port: https://localhost:4000 ")
+  console.log("AI server started on port: https://localhost: 4000 ")
 )
