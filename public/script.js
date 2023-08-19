@@ -76,6 +76,7 @@ const handleSubmit = async (e) => {
     method: "POST",
     headers: {
       "Content-Type": "application;json",
+      //"Content-Type": "application/json"
     },
     body: JSON.stringify({
       prompt: data.get("prompt")
@@ -84,6 +85,7 @@ const handleSubmit = async (e) => {
 
   clearInterval(loadInterval)
   messageDiv.innerHTML(" ")
+  //messageDiv.innerHTML = ""
 
   if (response.ok) {
     const data = await response.json()
@@ -124,3 +126,11 @@ const handleSubmit = async (e) => {
     alert (error)
   }
 }
+
+form.addEventListener("submit", handleSubmit());
+//form.addEventListener("submit", handleSubmit);
+form.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    handleSubmit(e)
+  }
+})
