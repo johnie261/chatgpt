@@ -102,6 +102,50 @@ const Chatting = () => {
             </div>
           </div>
         </nav>
+
+         <div className='chat-header'>
+           <div className="d-flex align-items-center gap-2">
+             <button
+              data-ds-toggle="collapse"
+              data-bs-target="#mainnavbarNav"
+              aria-aria-controls="mainnavbarNav"
+              aria-expanded="false"
+              aria-label="Toggel navigation" 
+             >
+              <BiMenu className="mobil_custom_menu" />
+             </button>
+             <a href="/" className="logo-icon d-flex d-md-none">
+              <img 
+                src="assets/svg/logo-icon.svg"
+                className="img-fluid"
+                alt=""
+              />
+             </a>
+             <h3 id="targetDiv">{active}</h3>
+           </div>
+
+           <div className="header-option">
+             {display == "ProMember" ? (
+              <a href="#">{display}</a>
+             ) : (
+              <a className="del-btn" data-cursor="pointer" href="#">
+                Free Left (<span id="freeTry">{Free || 0}</span>)
+              </a>
+             )}
+
+             <a
+               href="#!"
+               className="premium-btn"
+               id="subscriptionBtn"
+               data-cursor="pointer"
+             >
+              <MdPaid /> Get <span>premium</span>
+             </a>
+           </div>
+         </div>
+
+         
+
       </div>
     </div>
   )
