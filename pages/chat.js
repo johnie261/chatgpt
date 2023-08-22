@@ -1,8 +1,12 @@
 import React from 'react'
+import { Chatting, Modal } from '../Components/Chat'
 
 const chat = () => {
   return (
-    <div>chat</div>
+    <div>
+      <Chatting />
+      <Modal />
+    </div>
   )
 }
 
