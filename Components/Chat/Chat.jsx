@@ -4,6 +4,7 @@ import { MdPaid } from "react-icons/md";
 
 import { Form } from './index';
 import { useStateContext} from '../../Context/index'
+import Formy from './Formy';
 
 const Chat = () => {
   const [active, setActive] = useState("Ask anything");
@@ -32,13 +33,13 @@ const Chat = () => {
   ]
 
   const loadData = () => {
-    const UserDetail = localStorage.getItem("UserDetail");
+    const UserDetail = localStorage.getItem("Userdetails");
     const member = JSON.parse(UserDetail);
     setProMember(member)
 
     const freeTrail = localStorage.getItem("freeTrail");
     setFreeTrail(freeTrail)
-    console.log(freeTrail)
+    console.log("mimi", proMember)
   }
 
   useEffect(() => {
@@ -164,12 +165,14 @@ const Chat = () => {
 
          <div className="" id="chat_container"></div>
 
-         <Form 
+         <Form
            close={close}
            proMember={proMember}
            address={address}
            freeTrail={freeTrail}
          />
+
+         {/* <Formy /> */}
 
       </div>
     </div>

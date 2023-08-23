@@ -68,7 +68,7 @@ export const StateContextProvider = ({children}) => {
         id: userMembership.id.toNumber()
       }
 
-      console.log(userMembership)
+      console.log("useme", userMembership)
       setUserMembership(userMembership)
 
        const proMember = JSON.stringify(userMembership)
