@@ -9,11 +9,11 @@ const SideBar = () => {
       <button
         className='navbar-toggler d-none'
         type="button"
-        data-ds-toggle="collapse"
+        data-bs-toggle="collapse"
         data-bs-target="#mainnavbarNav"
-        aria-aria-controls="mainnavbarNav"
+        aria-controls="mainnavbarNav"
         aria-expanded="false"
-        aria-label="Toggel navigation" 
+        aria-label="Toggle navigation" 
       >
         <BiMenu className="mobil_custom_menu" />
       </button> 
@@ -46,7 +46,7 @@ const SideBar = () => {
             >
               <button
                 className='nav-link active'
-                data-ds-toggle="tab"
+                data-bs-toggle="tab"
                 data-bs-target="#chat"
                 aria-controls="chat"
                 aria-selected="true" 
@@ -66,7 +66,7 @@ const SideBar = () => {
             >
               <button
                 className='nav-link'
-                data-ds-toggle="tab"
+                data-bs-toggle="tab"
                 data-bs-target="#history"
                 aria-controls="history"
                 aria-selected="true" 
@@ -86,7 +86,7 @@ const SideBar = () => {
             >
               <button
                 className='nav-link'
-                data-ds-toggle="tab"
+                data-bs-toggle="tab"
                 data-bs-target="#subscription"
                 aria-controls="subscription"
                 aria-selected="true" 
@@ -106,7 +106,7 @@ const SideBar = () => {
             >
               <button
                 className='nav-link'
-                data-ds-toggle="tab"
+                data-bs-toggle="tab"
                 data-bs-target="#help"
                 aria-controls="help"
                 aria-selected="true" 
@@ -127,7 +127,7 @@ const SideBar = () => {
               <button
                 className='btn btn-primary nav-link'
                 type="button"
-                data-ds-toggle="modal"
+                data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               >
                 <MdPaid className="icon-custom" />
@@ -145,7 +145,7 @@ const SideBar = () => {
             >
               <button
                 className='nav-link'
-                data-ds-toggle="tab"
+                data-bs-toggle="tab"
                 data-bs-target="#setting"
                 aria-controls="setting"
                 aria-selected="true" 

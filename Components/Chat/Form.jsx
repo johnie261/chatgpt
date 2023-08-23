@@ -22,11 +22,11 @@ const Form = ({close, proMember, address, freeTrail}) => {
         <button
             className="navbar-toggler d-lg-none d-block msger-send-btn"
             type="button"
-            data-ds-toggle="collapse"
+            data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-aria-controls="navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggel navigation"
+            aria-label="Toggle navigation"
           >
             <BiMenu className='icon_size'/>
         </button> 
@@ -60,11 +60,11 @@ const Form = ({close, proMember, address, freeTrail}) => {
         <button
             className="navbar-toggler d-lg-none d-block msger-send-btn"
             type="button"
-            data-ds-toggle="collapse"
+            data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-aria-controls="navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggel navigation"
+            aria-label="Toggle navigation"
           >
             <BiMenu className='icon_size'/>
         </button> 

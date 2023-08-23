@@ -54,18 +54,18 @@ const Chat = () => {
       id="chat"
       role="tabpanel"
       aria-labeledby="chat"
-      tabIndex="0"
+      tabindex="0"
     >
       <div className="main-wrapper">
         <nav className="navbar navbar-expand-lg bg-light p-0">
           <button
             className="navbar-toggler d-none"
             type="button"
-            data-ds-toggle="collapse"
+            data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-aria-controls="navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggel navigation"
+            aria-label="Toggle navigation"
           >
             <BiMenu className='mobil_custom_menu'/>
           </button>
@@ -108,7 +108,7 @@ const Chat = () => {
            <div className="d-flex align-items-center gap-2">
              <button
               className='navbar-toggler d-md-none d-block'
-              data-ds-toggle="collapse"
+              data-bs-toggle="collapse"
               data-bs-target="#mainnavbarNav"
               aria-aria-controls="mainnavbarNav"
               aria-expanded="false"
@@ -131,7 +131,7 @@ const Chat = () => {
               <a href="#">{display}</a>
              ) : (
               <a className="del-btn" data-cursor="pointer" href="#">
-                Free Left (<span id="freeTry">{Free || 0}</span>)
+                Free Left <span id="freeTry">{Free || 0}</span> / 5
               </a>
              )}
 
@@ -155,7 +155,9 @@ const Chat = () => {
                   className="img-fluid"
                   alt=""
                 />
-                <h3>{active == "Ask anything" ? "" : "Ask"}</h3>
+                <h3>
+                  {active == "Ask anything" ? "" : "Ask"} {active} chatbot
+                </h3>
               </div>
             ) : (
               ""

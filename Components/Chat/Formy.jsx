@@ -15,7 +15,7 @@ const Formy = () => {
             data-bs-target="#navbarNav"
             aria-aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggel navigation"
+            aria-label="Toggle navigation"
           >
             <BiMenu className='icon_size'/>
         </button> 
