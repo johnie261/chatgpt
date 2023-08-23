@@ -17,7 +17,7 @@ const Form = ({close, proMember, address, freeTrail}) => {
 
   return (
     <form id="form_input_data" className="msger-inputarea">
-      {proMember?.addressUser == addry && proMember?.expiredate !== expiredate && (
+      {/* {proMember?.addressUser == addry && proMember?.expiredate !== expiredate && (
         <>
         <button
             className="navbar-toggler d-lg-none d-block msger-send-btn"
@@ -52,7 +52,46 @@ const Form = ({close, proMember, address, freeTrail}) => {
           <MdSend className="icon_size" />
         </button>
         </>
-      )} 
+      )}  */}
+
+      {
+        freeTrail <= 4 && (
+          <>
+        <button
+            className="navbar-toggler d-lg-none d-block msger-send-btn"
+            type="button"
+            data-ds-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggel navigation"
+          >
+            <BiMenu className='icon_size'/>
+        </button> 
+
+        <input 
+          type="text"
+          name="prompt"
+          className="msger-input"
+          placeholder="Ask any question here.."
+          rows="1"
+          cols="1"
+        />
+
+        <a href="" className="scan-icon">
+          <AiFillAudio className="icon_size" />
+        </a>
+
+        <a href="" className="mic-icon">
+          <AiFillPicture className="icon_size" />
+        </a>
+
+        <button className='msger-send-btn' type="submit" onClick={(e)=>close(e)}>
+          <MdSend className="icon_size" />
+        </button>
+        </>
+        )
+      }
     </form>
   )
 }
