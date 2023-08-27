@@ -58,7 +58,7 @@ export const StateContextProvider = ({children}) => {
       setContractMembership(contractMembership)
 
       const userMembership = await contract.getUsermemberships(connectAccount)
-      console.log(userMembership)
+      console.log("usermem", userMembership)
 
       userMembership = {
         addressUser: userMembership.addressUser.toLowerCase(),

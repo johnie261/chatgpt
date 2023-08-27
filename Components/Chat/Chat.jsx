@@ -73,7 +73,7 @@ const Chat = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <div className="inner-menu-panel">
               <button
-                data-be-toggle="collapse"
+                data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
                 className="inner-close d-block d-lg-none"
               >

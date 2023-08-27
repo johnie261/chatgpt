@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdPaid } from 'react-icons/md'
+import { BiMenu } from 'react-icons/bi'
 
 const Help = () => {
   return (
@@ -14,7 +15,7 @@ const Help = () => {
         <div className="fixed-header">
           <div className="d-flex align-items-center gap-2">
             <button
-              className="navbar-toggle d-md-none d-block"
+              className="navbar-toggler d-md-none d-block"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#mainnavbarNav"
@@ -22,11 +23,12 @@ const Help = () => {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
+              <BiMenu className='mobil_custom_menu'/>
               <i className='iconsax' data-icon="text-align-justify"></i>
             </button>
 
             <a href="/" className='logo-icon d-flex d-md-none'>
-              <img src="assets/svg/logo.svg" className="img-fluid" alt=""/>
+              <img src="assets/svg/logo-icon.svg" className="img-fluid" alt=""/>
             </a>
             <h3>FAQ</h3>
           </div>
